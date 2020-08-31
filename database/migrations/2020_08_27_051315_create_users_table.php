@@ -17,8 +17,12 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->integer('contact_No');
+            $table->string('contact_No');
             $table->string('address');
+            $table->string('postal_Code');
+            $table->string('city',100);
+            $table->string('state',100);
+            $table->string('country',100);
             $table->timestamps();
         });
     }
