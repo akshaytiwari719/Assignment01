@@ -15,10 +15,10 @@ class CreateOrderTable extends Migration
     {
         Schema::create('order', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('order_Date');
+            $table->date('orderDate');
             $table->string('status');
-            $table->integer('user_Id')->unsigned();
-            $table->foreign('user_Id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('userId')->unsigned();
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
