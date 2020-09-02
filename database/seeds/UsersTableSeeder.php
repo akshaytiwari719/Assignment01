@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
                 [
                     'name'          => $faker->name,
                     'email'         => $faker->unique()->safeEmail,
-                    'contactNo'     =>  $faker->phoneNumber,
+                    'contactNo'     => $faker->phoneNumber,
                     'address'       => $faker->address,
                     'postalCode'    => $faker->postcode,
                     'state'         => $faker->state,
