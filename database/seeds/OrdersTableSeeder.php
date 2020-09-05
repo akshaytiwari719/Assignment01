@@ -19,7 +19,7 @@ class OrdersTableSeeder extends Seeder
         foreach(range(1,20) as $key){
             \DB::table('order')->insert([
                 [
-                    'date'          => $faker->date($format = 'Y-m-d', $max = 'now'),
+                    'date'          => $faker->dateTimeBetween($startDate = '2020-08-15', $endDate = '2020-09-01', $timezone = null),
                     'status'        => $faker->randomElement($statusOfOrder),
                     'userId'        => $faker->randomElement($usersId),                    
                     'created_at'    =>  date('Y-m-d H:i:s'),
